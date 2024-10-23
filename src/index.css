@@ -1,0 +1,136 @@
+:root{
+  --primary:#8d4fff;
+  --secondary: #3849ff;
+  --dark: #13122b;
+  --light: #e0ddff;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Fira Sans", sans-serif;
+}
+
+body{
+  background-color: var(--light);
+}
+
+.app{
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+}
+
+@media screen and (max-width: 899px){
+  .calculadora{
+    width: 100%;
+    max-width: 400px;
+    background-color: #FFF;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0px 2px 64px rgba(0, 0, 0, 0.2);
+  }
+
+  button{
+    appearance: none;
+    border: none;
+    outline: none;
+    color: #FFF;
+    font-size: 25px;
+    font-weight: 700;
+    padding: 16px;
+    cursor: pointer;
+    transition: 0.1s;
+  }
+
+  .display{
+    display: flex;
+    padding: 16px;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: var(--dark);
+    color: var(--light);
+    font-weight: 700;
+  }
+  
+  .result{
+    font-size: 15px;
+    color: #888;
+  }
+  .equacao{
+    font-size: 30px;
+    color: white;
+  }
+}
+
+@media screen and (min-width: 900px){
+  .calculadora{
+    width: 100%;
+    max-width: 800px;
+    background-color: #FFF;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0px 2px 64px rgba(0, 0, 0, 0.2);  
+  }
+
+  button{
+    appearance: none;
+    border: none;
+    outline: none;
+    color: #FFF;
+    font-size: 40px;
+    font-weight: 700;
+    padding: 16px;
+    cursor: pointer;
+    transition: 0.1s;
+  }
+
+  .display{
+    display: flex;
+    padding: 16px;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: var(--dark);
+    color: var(--light);
+    font-weight: 700;
+  }
+  
+  .result{
+    font-size: 25px;
+    color: #888;
+  }
+
+  .equacao{
+    font-size: 50px;
+    color: white;
+  }
+}
+
+
+button:hover{
+  opacity: 0.9;
+}
+
+.operadores{
+  display: flex;
+}
+
+.operadores button{
+  flex: 1 1 0%;
+  background-color: var(--primary);
+  font-weight: 700;
+}
+
+.digitos{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.digitos button{
+  flex: 1 1 33.333%;
+  max-width: 33.333%;
+  background-color: var(--dark);
+}
